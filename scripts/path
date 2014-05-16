@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Print help if no arguments
+help="Prints full path of supplied arguments"
+usage="Usage: $0 <files>"
+if [[ $# -eq 0 ]] ; then
+    echo -e "\n$help\n$usage\n" 
+    exit 0
+fi
+
+# Print full path of all arguments
+for i in "$@"
+do
+	echo $(cd $(dirname "$i") && pwd)/$(basename "$i")
+done
