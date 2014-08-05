@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Takes tab delimited data and converts to dokuwiki table format.
+# https://www.dokuwiki.org/wiki:syntax
+
+# sample1	value4
+# sample2	value5
+# sample3	value6
+
+# |sample1|value4|
+# |sample2|value5|
+# |sample3|value6|
+
+sed 's/\t/|/g' $1 | sed 's/^\(.*\)$/|\1|/g'
