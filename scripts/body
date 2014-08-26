@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Runs code on everything except the first line. E.g.:
+# $ echo -e "header\n1\n5\n4\n7\n3" | body sort
+# See http://unix.stackexchange.com/a/11859
+
+IFS= read -r header
+printf '%s\n' "$header"
+eval $@
