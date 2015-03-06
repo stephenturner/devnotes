@@ -1,6 +1,6 @@
-### [Wiki](https://github.com/stephenturner/devnotes/wiki/_pages)
+### [Notes](notes)
 
-The **[wiki](https://github.com/stephenturner/devnotes/wiki/_pages)** contains random programming notes, inspired by [@vsbuffalo's devnotes repo](https://github.com/vsbuffalo/devnotes).
+The [notes](notes) directory has random programming notes.
 
 ### [Scripts](scripts)
 
