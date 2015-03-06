@@ -32,3 +32,52 @@ find *.txt | xargs -i echo "echo 'runThisCommand {} > {}.result.txt' | xargs sru
 # echo 'runThisCommand data2.txt > data2.txt.result.txt' | xargs srun -p economy --time=2:00:00 --mem=2000 -A uvabx  &
 # echo 'runThisCommand data3.txt > data3.txt.result.txt' | xargs srun -p economy --time=2:00:00 --mem=2000 -A uvabx  &
 ```
+
+## Using an `sbatch` placeholder script
+
+### Create placeholder sbatch scripts
+
+First, create a placeholder sbatch script. E.g., using a single core:
+
+**simple.sbatch**: 
+
+```bash
+#!/bin/bash
+#SBATCH -p economy
+#SBATCH -N 1 
+#SBATCH -n 1 
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=1000
+#SBATCH -A uvabx
+$1
+```
+
+Or multiple cores with total RAM specified (multiply n*6 to get optimal RAM, or RAM/6 to get optimal n):
+
+**simple4c.sbatch**:
+
+```bash
+#!/bin/bash
+#SBATCH -p economy
+#SBATCH -N 1 
+#SBATCH -n 4 
+#SBATCH --time=12:00:00
+#SBATCH --mem=24000
+#SBATCH -A uvabx
+CMD=$1
+$($CMD);
+```
+
+### Run job with sbatch and the placeholder script
+
+E.g., simple job to run the `hostname` command:
+
+```bash
+sbatch simple.sbatch hostname
+```
+
+Or using the featureCounts example above:
+
+```bash
+sbatch simple4c.sbatch "featureCounts -a genes.gtf -o counts.txt -pBT2 *.sam " 
+```
