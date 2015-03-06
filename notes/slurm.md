@@ -5,7 +5,8 @@
 * Translation table: <http://slurm.schedmd.com/rosetta.pdf>
 * Official SLURM docs: <http://slurm.schedmd.com/documentation.html>
 * LLNL's SLURM FAQ: <https://computing.llnl.gov/linux/slurm/faq.html>
-* UVACSE: http://uvacse.virginia.edu/user-info
+* Harvard's SLURM help: <https://rc.fas.harvard.edu/resources/running-jobs/>
+* UVACSE: <http://uvacse.virginia.edu/user-info>
   * HPC Queues: <http://uvacse.virginia.edu/rivannas-queues>
   * HPC FAQ: <http://uvacse.virginia.edu/user-info/frequently-asked-questions>
   * HPC Modules: <http://uvacse.virginia.edu/user-info/modules>
