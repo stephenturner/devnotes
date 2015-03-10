@@ -1,7 +1,1 @@
-### [Notes](notes)
-
-The [notes](notes) directory has random programming notes.
-
-### [Scripts](scripts)
-
-The [scripts](scripts) directory has some random utility scripts that don't fit nicely anywhere else.
+This directory contains random programming [notes](notes), orphan [scripts](scripts) that don't fit anywhere else, a few [makefiles](makefiles), and some placeholder [sbatch](sbatch) scripts for use on SLURM HPC systems.
