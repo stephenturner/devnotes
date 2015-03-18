@@ -1,4 +1,4 @@
-#!/bin/env perl -w
+#!/bin/env perl
 #
 #  This script was developed by Robin Barker (Robin.Barker@npl.co.uk),
 #  from Larry Wall's original script eg/rename from the perl source.
@@ -6,6 +6,7 @@
 #  This script is free software; you can redistribute it and/or modify it
 #  under the same terms as Perl itself.
 
+use warnings;
 use strict;
 
 use Getopt::Long;
