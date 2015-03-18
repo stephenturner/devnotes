@@ -14,5 +14,6 @@ do
 	# Get the full path
 	fullpath=$(cd $(dirname "$i") && pwd)/$(basename "$i")
 	# change /home/sdt5z/public_html to http://people.virginia.edu/~sdt5z/ and change // to / if exists
-	echo $fullpath | sed 's/\/home\/sdt5z\/public_html/http:\/\/people.virginia.edu\/~sdt5z\//g' | sed 's@//@/@g2'
+	# echo $fullpath | sed 's/\/home\/sdt5z\/public_html/http:\/\/people.virginia.edu\/~sdt5z\//g' | sed 's@//@/@g2'
+  echo $fullpath | sed 's/\/nv\/blue\/sdt5z\/public_html/http:\/\/people.virginia.edu\/~sdt5z\//g' | sed 's@//@/@g2'
 done
