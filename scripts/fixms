@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Fixes microsoft line endings
+
+tr '\r' '\n' $1
