@@ -34,6 +34,7 @@ Install [package control](https://packagecontrol.io/installation) by typing the 
 
 - [Sidebar Enhancements](https://github.com/titoBouzout/SideBarEnhancements)
 - [GitSavvy](https://github.com/divmain/GitSavvy)
+- [Pandoc](https://packagecontrol.io/packages/Pandoc)
 
 ### Markdown
 
