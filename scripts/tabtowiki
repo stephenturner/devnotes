@@ -11,4 +11,11 @@
 # |sample2|value5|
 # |sample3|value6|
 
-sed 's/\t/|/g' $1 | sed 's/^\(.*\)$/|\1|/g'
+if [ "$(uname -s)" == "Darwin" ] # If the system is Mac OS X
+then
+   mysed="gsed"
+else
+   mysed="sed"
+fi
+
+cat $1 | $mysed 's/\t/|/g' | $mysed 's/^\(.*\)$/|\1|/g' | $mysed '1 s/|/^/g'
