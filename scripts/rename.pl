@@ -1,4 +1,4 @@
-#!/bin/env perl
+#!/usr/bin/perl
 #
 #  This script was developed by Robin Barker (Robin.Barker@npl.co.uk),
 #  from Larry Wall's original script eg/rename from the perl source.

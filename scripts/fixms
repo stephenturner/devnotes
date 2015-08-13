@@ -2,4 +2,14 @@
 
 # Fixes microsoft line endings
 
-tr '\r' '\n' $1
+# Choose which sed to use (gsed: brew install gnu-sed)
+if [ "$(uname -s)" == "Darwin" ] # If the system is Mac OS X
+then
+   mysed="gsed"
+else
+   mysed="sed"
+fi
+
+$mysed -i "s/\r/\n/g" $1
+echo >> $1
+$mysed -i '/^$/d' $1
