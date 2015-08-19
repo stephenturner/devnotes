@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Creates git.io vanity URL.
+# See blog post at https://github.com/blog/985-git-io-github-url-shortener
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: ghurl <github url> <vanity code>"
+    echo "Example: ghurl https://github.com/stephenturner sdt"
+    echo "Result:  Shortens github.com/stephenturner to git.io/sdt"
+    exit 1
+fi
+
+url="$1"
+code="$2"
+
+echo "Creating vanity GitHub URL..."
+ghurl=$(curl -s -i http://git.io -F "url=$url" -F "code=$code" | grep Location | awk '{print $2}')
+echo $ghurl | pbcopy
+echo "Shortened $url to git.io/$code"
+echo
+echo "Copied to clipboard: ${ghurl}"
+echo
