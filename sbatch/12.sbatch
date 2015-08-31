@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p economy
+#SBATCH -p serial
 #SBATCH -N 1 
 #SBATCH -n 12 
 #SBATCH --time=12:00:00
