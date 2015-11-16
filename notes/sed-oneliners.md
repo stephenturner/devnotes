@@ -1,18 +1,25 @@
 # sed oneliners
 
-Useful One-line Scripts For `sed` 
+**_Jump to:_**  
+- [File Spacing](#file-spacing)
+- [Text Conversion And Substitution](#text-conversion-and-substitution)
+- [Selective Printing Of Certain Lines](#selective-printing-of-certain-lines)
+- [Selective Deletion Of Certain Lines](#selective-deletion-of-certain-lines)
+- [Special Applications](#special-applications)
+- [Other Notes](#other-notes)
 
-Dec. 29, 2005  
-version 5.5
+Attribution to original: 
 
-Compiled by Eric Pement - pemente[at]northpark[dot]edu
+```
+USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)        Dec. 29, 2005
+Compiled by Eric Pement - pemente[at]northpark[dot]edu        version 5.5
 
 Latest version of this file (in English) is usually at:
+   http://sed.sourceforge.net/sed1line.txt
+   http://www.pement.org/sed/sed1line.txt
+```
 
-<http://sed.sourceforge.net/sed1line.txt>  
-<http://www.pement.org/sed/sed1line.txt>
-
-## File Spacing:
+### File Spacing
 
 ```sh
  # double space a file
@@ -38,7 +45,7 @@ Latest version of this file (in English) is usually at:
  sed '/regex/{x;p;x;G;}'
  ```
 
-## Numbering:
+### Numbering
 
 ```sh
  # number each line of a file (simple left alignment). Using a tab (see
@@ -55,7 +62,7 @@ Latest version of this file (in English) is usually at:
  sed -n '$='
  ```
 
-## Text Conversion And Substitution:
+### Text Conversion And Substitution
 
 ```sh
  # IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format.
@@ -153,7 +160,7 @@ Latest version of this file (in English) is usually at:
  sed 'n;n;n;n;G;'             # other seds
 ```
 
-## Selective Printing Of Certain Lines:
+### Selective Printing Of Certain Lines
 
 ```sh
  # print first 10 lines of file (emulates behavior of "head")
@@ -245,7 +252,7 @@ Latest version of this file (in English) is usually at:
  sed -n '/Iowa/,/Montana/p'             # case sensitive
 ```
 
-## Selective Deletion Of Certain Lines:
+### Selective Deletion Of Certain Lines
 
 ```sh
  # print all of file EXCEPT section between 2 regular expressions
@@ -305,7 +312,7 @@ Latest version of this file (in English) is usually at:
  sed -n '/^$/{p;h;};/./{x;/./p;}'
 ```
 
-## Special Applications:
+### Special Applications
 
 ```sh
  # remove nroff overstrikes (char, backspace) from man pages. The 'echo'
@@ -358,6 +365,8 @@ Latest version of this file (in English) is usually at:
  echo @echo off >zipup.bat
  dir /b *.txt | sed "s/^\(.*\)\.TXT/pkzip -mo \1 \1.TXT/" >>zipup.bat
 ```
+
+#### Other Notes
 
 ```
 TYPICAL USE: Sed takes one or more editing commands and applies all of
