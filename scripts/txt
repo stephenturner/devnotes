@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Uses the http://textbelt.com/ API to send a text message.
+# The PHONE environment variable must be set, e.g., in your .bashrc.
+
+# Usage: txt "<a text message to send>"
+
+# Example 1
+# When long_running_command is done successfully, this command
+# will send a text to the indicated number saying:
+# "done with long running command (from myusername on myhostname)"
+# long_running_command && txt 'done with long running command'
+
+# Example 2
+# Tells you whether command succeeded or failed
+# command && txt success || txt fail
+
+if [ -z "$PHONE" ]; then
+  echo 'Environment variable $PHONE is not set. Set this in .bashrc and try again.'
+else 
+  curl -X POST http://textbelt.com/text -d number=$PHONE -d "message=$1 (from $(whoami) on $(hostname))"
+fi
