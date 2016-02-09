@@ -17,6 +17,7 @@
 
 if [ -z "$PHONE" ]; then
   echo 'Environment variable $PHONE is not set. Set this in .bashrc and try again.'
+  exit 1
 else 
-  curl -X POST http://textbelt.com/text -d number=$PHONE -d "message=$1 (from $(whoami) on $(hostname))"
+  curl --silent -X POST http://textbelt.com/text -d number=$PHONE -d "message=$1 (from $(whoami) on $(hostname))" > /dev/null
 fi
