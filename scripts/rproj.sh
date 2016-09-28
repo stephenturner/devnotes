@@ -2,7 +2,7 @@
 
 # Writes a standard Rproj file to workingDirName.Rproj
 
-PROJFILE="$(basename $(pwd)).Rproj"
+PROJFILE="$(basename "$(pwd)").Rproj"
 
 cat > $PROJFILE << EOF
 Version: 1.0
