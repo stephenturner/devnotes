@@ -10,6 +10,7 @@ else
    mysed="sed"
 fi
 
+dos2unix $1
 $mysed -i "s/\r/\n/g" $1
 echo >> $1
 $mysed -i '/^$/d' $1
