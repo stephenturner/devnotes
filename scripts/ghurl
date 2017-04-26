@@ -14,7 +14,7 @@ url="$1"
 code="$2"
 
 echo "Creating vanity GitHub URL..."
-ghurl=$(curl -s -i http://git.io -F "url=$url" -F "code=$code" | grep Location | awk '{print $2}')
+ghurl=$(curl -i https://git.io -F "url=$url" -F "code=$code" | grep Location | awk '{print $2}')
 echo $ghurl | pbcopy
 echo "Shortened $url to git.io/$code"
 echo
