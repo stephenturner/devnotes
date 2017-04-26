@@ -35,6 +35,9 @@ cranPkgs <- c(
   "yaml"
 )
 
+# Set your CRAN mirror
+options("repos" = c(CRAN = "https://cloud.r-project.org/"))
+
 # Install them all
 system.time(install.packages(cranPkgs))
 
@@ -45,11 +48,12 @@ for (p in cranPkgs) suppressPackageStartupMessages(library(p, character.only=TRU
 
 # Bioconductor ------------------------------------------------------------
 
+# Basic Bioconductor installation
 source("http://bioconductor.org/biocLite.R")
-
 biocLite(suppressUpdates=TRUE)
 library(BiocInstaller)
 
+# Software packages
 biocPkgs <- c(
   "affy",
   "annotate",
@@ -58,13 +62,10 @@ biocPkgs <- c(
   "arrayQualityMetrics",
   "beadarray",
   "biomaRt",
-  "BSgenome.Hsapiens.UCSC.hg19",
-  "BSgenome.Mmusculus.UCSC.mm9",
   "DESeq2",
   "edgeR",
   "genefilter",
   "GEOquery",
-  "GO.db",
   "GOstats",
   "limma",
   "minfi",
@@ -73,7 +74,11 @@ biocPkgs <- c(
   "SPIA"
 )
 
+# Annotation packages
 biocAnnoPkgs <- c(
+  "BSgenome.Hsapiens.UCSC.hg19",
+  "BSgenome.Mmusculus.UCSC.mm9",
+  "GO.db",
   "hgu133a.db",
   "hgu133plus2.db",
   "hgu95av2.db",
@@ -103,8 +108,9 @@ for (p in c(biocPkgs, biocAnnoPkgs)) suppressPackageStartupMessages(library(p, c
 
 # GitHub ------------------------------------------------------------------
 
-devtools::install_github("hadley/emo")
+devtools::install_github("stephenturner/Tmisc") # http://stephenturner.us/Tmisc/news/
 devtools::install_github("stephenturner/annotables")
+devtools::install_github("hadley/emo")
 devtools::install_github("krlmlr/here")
 devtools::install_github("tidyverse/glue")
 
