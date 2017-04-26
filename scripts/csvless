@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+set -u
+set -o pipefail
+
+CSVLOOK=$(which csvlook || true)
+
+if [[ ! -f "$CSVLOOK" ]]
+then
+  echo -e "Error: csvkit is not installed, please install it from https://csvkit.readthedocs.io."
+  exit 1
+fi
+
+csvlook $@ | less -S
