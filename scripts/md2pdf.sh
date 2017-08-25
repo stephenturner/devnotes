@@ -13,7 +13,7 @@ while getopts 'o:' opt ; do
 done
 
 # skip over the processed options
-shift $((OPTIND-1)) 
+shift $((OPTIND-1))
 
 # check for mandatory positional parameters
 if [ $# -eq 0 ]; then
@@ -25,7 +25,7 @@ fi
 # Create a pdf file for each markdown file
 for md in "$@"
 do
-  CMD="pandoc $PANDOCOPTS -s -V geometry:margin=1in -V documentclass:article -V fontsize=12pt $md -o $md.pdf"
+  CMD="pandoc -s -V geometry:margin=1in -V documentclass:article -V fontsize=11pt $PANDOCOPTS $md -o $md.pdf"
   echo $CMD
   $CMD
 done

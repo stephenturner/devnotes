@@ -9,7 +9,7 @@ RSYNC="time rsync -va --progress --delete --exclude=.DS_Store"
 DEST="/Volumes/backup/rsync"
 
 # which directories do you want to copy?
-declare -a DIRS=("Box Sync" "Downloads" "Dropbox")
+declare -a DIRS=("Downloads" "Dropbox")
 
 # need to be in home directory
 cd ~

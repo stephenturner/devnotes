@@ -1,16 +1,23 @@
 # CRAN --------------------------------------------------------------------
 
 cranPkgs <- c(
+  "assertr",
   "base64enc",
   "bitops",
   "caTools",
+  "clipr",
+  "datapasta",
   "d3heatmap",
   "data.table",
   "devtools",
+  "DT",
   "evaluate",
   "formatR",
   "ggrepel",
+  "glue",
   "gplots",
+  "heatmaply",
+  "here",
   "highcharter",
   "highr",
   "Hmisc",
@@ -19,10 +26,14 @@ cranPkgs <- c(
   "leaflet",
   "maps",
   "markdown",
+  "networkD3",
   "NMF",
+  "proxy",
   "rentrez",
+  "rjson",
   "rlist",
   "rmarkdown",
+  "roxygen2",
   "rprojroot",
   "shiny",
   "shinythemes",
@@ -71,7 +82,8 @@ biocPkgs <- c(
   "minfi",
   "oligo",
   "oligoClasses",
-  "SPIA"
+  "SPIA",
+  "tximport"
 )
 
 # Annotation packages
@@ -111,6 +123,4 @@ for (p in c(biocPkgs, biocAnnoPkgs)) suppressPackageStartupMessages(library(p, c
 devtools::install_github("stephenturner/Tmisc") # http://stephenturner.us/Tmisc/news/
 devtools::install_github("stephenturner/annotables")
 devtools::install_github("hadley/emo")
-devtools::install_github("krlmlr/here")
-devtools::install_github("tidyverse/glue")
 
