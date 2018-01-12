@@ -15,8 +15,11 @@ sudo yum -y install libpng  libpng-devel
 sudo yum -y install openssl-devel
 sudo yum -y install mysql-devel
 
-# If you get the libbz2.so.1.0 error, do this
+# Needed for samtools.
 sudo yum -y install bzip2-devel
+# If you get the libbz2.so.1.0 error, do this
+# sudo ln -s /usr/lib64/libbz.so /usr/lib64/libbz2.s.1.0
+
 
 # Java
 yum search java | grep '^java-'
@@ -25,7 +28,7 @@ sudo yum -y install java-1.8.0-openjdk
 ## Or the whole **JDK**
 # sudo yum -y install java-1.8.0-openjdk-devel
 
-# R can't execute out of /tmp. Make a /Rtmp directory:
+# R can't execute out of /tmp, can't build packages from source. Make a /Rtmp directory:
 # sudo mkdir /Rtmp
 # Then when running R set the environment variable.
 echo 'if (dir.exists("/Rtmp")) Sys.setenv(TMPDIR="/Rtmp")' >> .Rprofile
