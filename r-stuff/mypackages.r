@@ -1,6 +1,7 @@
 # CRAN --------------------------------------------------------------------
 
 cranPkgs <- c(
+  "addinslist",
   "assertr",
   "base64enc",
   "bitops",
@@ -10,6 +11,7 @@ cranPkgs <- c(
   "d3heatmap",
   "data.table",
   "devtools",
+  "diffobj",
   "DT",
   "evaluate",
   "formatR",
@@ -28,6 +30,7 @@ cranPkgs <- c(
   "markdown",
   "networkD3",
   "NMF",
+  "printr",
   "proxy",
   "rentrez",
   "rjson",
@@ -37,11 +40,13 @@ cranPkgs <- c(
   "rprojroot",
   "shiny",
   "shinythemes",
+  "styler",
   "tidyverse",
   "Tmisc",
   "VennDiagram",
   "viridis",
   "visNetwork",
+  "writexl",
   "XML",
   "yaml"
 )
@@ -123,4 +128,5 @@ for (p in c(biocPkgs, biocAnnoPkgs)) suppressPackageStartupMessages(library(p, c
 devtools::install_github("stephenturner/Tmisc") # http://stephenturner.us/Tmisc/news/
 devtools::install_github("stephenturner/annotables")
 devtools::install_github("hadley/emo")
+devtools::install_github("ThinkR-open/remedy") # https://github.com/ThinkR-open/remedy
 
