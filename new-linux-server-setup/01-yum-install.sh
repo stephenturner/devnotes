@@ -16,9 +16,9 @@ sudo yum -y install openssl-devel
 sudo yum -y install mysql-devel
 
 # Needed for various R packages (minfi, mixOmics, rgl)
-sudo yum -y install mesa-libGL mesa-libGL-devel # needed for R rgl package
-sudo yum -y install mesa-libGLU mesa-libGLU-devel # needed for R rgl package
-sudo yum -y install libX11 libX11-devel # needed for R rgl package
+sudo yum -y install mesa-libGL mesa-libGL-devel
+sudo yum -y install mesa-libGLU mesa-libGLU-devel
+sudo yum -y install libX11 libX11-devel
 
 # Needed for samtools.
 sudo yum -y install bzip2-devel
