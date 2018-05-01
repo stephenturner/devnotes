@@ -8,7 +8,9 @@ conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 
+# Base environment
+conda install numpy scipy scikit-learn matplotlib pandas jupyter
 
-# Create a conda environment named "wgs" that includes all the tools you need.
-# See docs at https://conda.io/docs/using/envs.html
-# conda create --name wgs bwa sambamba samblaster freebayes bcftools samtools vt bedtools vcftools ensembl-vep snpeff fastqc vcfanno vcflib
+# Other environments
+conda create -y --name ngs    fastqc fastq-screen fastx_toolkit multiqc sratools picard bedtools htslib samtools bcftools vcftools bwa bowtie2 blast biopython mummer mash 
+conda create -y --name rnaseq fastqc fastq-screen fastx_toolkit multiqc sratools picard bedtools htslib samtools bcftools star salmon kallisto subread
