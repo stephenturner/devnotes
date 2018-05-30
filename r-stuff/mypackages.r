@@ -4,6 +4,7 @@ cranPkgs <- c(
   "addinslist",
   "assertr",
   "base64enc",
+  "beepr",
   "bitops",
   "caTools",
   "clipr",
@@ -13,16 +14,16 @@ cranPkgs <- c(
   "devtools",
   "diffobj",
   "DT",
-  "evaluate",
+  "factoextra",
   "formatR",
   "ggrepel",
-  "glue",
   "gplots",
   "heatmaply",
   "here",
   "highcharter",
   "highr",
   "Hmisc",
+  "janitor",
   "jsonlite",
   "knitr",
   "leaflet",
@@ -30,6 +31,10 @@ cranPkgs <- c(
   "markdown",
   "networkD3",
   "NMF",
+  "openxlsx",
+  "pheatmap",
+  "pkgdown",
+  "ppclust",
   "printr",
   "proxy",
   "rentrez",
@@ -37,10 +42,9 @@ cranPkgs <- c(
   "rlist",
   "rmarkdown",
   "roxygen2",
-  "rprojroot",
   "shiny",
-  "shinythemes",
   "styler",
+  "Seurat",
   "tidyverse",
   "Tmisc",
   "VennDiagram",
@@ -71,22 +75,25 @@ library(BiocInstaller)
 
 # Software packages
 biocPkgs <- c(
-  "affy",
+  # "affy",
   "annotate",
-  "affy",
-  "annotate",
-  "arrayQualityMetrics",
-  "beadarray",
+  # "arrayQualityMetrics",
+  # "beadarray",
   "biomaRt",
+  "clusterProfiler",
   "DESeq2",
   "edgeR",
+  "gage",
+  "gageData",
   "genefilter",
+  "ggtree",
   "GEOquery",
   "GOstats",
   "limma",
   "minfi",
-  "oligo",
-  "oligoClasses",
+  # "oligo",
+  # "oligoClasses",
+  "pathview",
   "SPIA",
   "tximport"
 )
@@ -94,24 +101,26 @@ biocPkgs <- c(
 # Annotation packages
 biocAnnoPkgs <- c(
   "BSgenome.Hsapiens.UCSC.hg19",
+  "BSgenome.Hsapiens.UCSC.hg38",
   "BSgenome.Mmusculus.UCSC.mm9",
-  "GO.db",
-  "hgu133a.db",
-  "hgu133plus2.db",
-  "hgu95av2.db",
-  "pd.hugene.1.0.st.v1",
-  "hugene10stv1cdf",
-  "hugene10sttranscriptcluster.db",
-  "pd.hugene.2.0.st",
-  "hugene20sttranscriptcluster.db",
-  "pd.mogene.1.0.st.v1",
-  "mogene10stv1cdf",
-  "mogene10sttranscriptcluster.db",
-  "mogene10stprobeset.db",
-  "mouse4302.db",
-  "FDb.InfiniumMethylation.hg19",
-  "IlluminaHumanMethylation450kmanifest",
-  "IlluminaHumanMethylationEPICmanifest"
+  "BSgenome.Mmusculus.UCSC.mm10",
+  # "hgu133a.db",
+  # "hgu133plus2.db",
+  # "hgu95av2.db",
+  # "pd.hugene.1.0.st.v1",
+  # "hugene10stv1cdf",
+  # "hugene10sttranscriptcluster.db",
+  # "pd.hugene.2.0.st",
+  # "hugene20sttranscriptcluster.db",
+  # "pd.mogene.1.0.st.v1",
+  # "mogene10stv1cdf",
+  # "mogene10sttranscriptcluster.db",
+  # "mogene10stprobeset.db",
+  # "mouse4302.db",
+  # "FDb.InfiniumMethylation.hg19",
+  # "IlluminaHumanMethylation450kmanifest",
+  # "IlluminaHumanMethylationEPICmanifest",
+  "GO.db"
 )
 
 
@@ -125,8 +134,8 @@ for (p in c(biocPkgs, biocAnnoPkgs)) suppressPackageStartupMessages(library(p, c
 
 # GitHub ------------------------------------------------------------------
 
-devtools::install_github("stephenturner/Tmisc") # http://stephenturner.us/Tmisc/news/
+# devtools::install_github("stephenturner/Tmisc")
 devtools::install_github("stephenturner/annotables")
+devtools::install_github("stephenturner/hcop")
 devtools::install_github("hadley/emo")
 devtools::install_github("ThinkR-open/remedy") # https://github.com/ThinkR-open/remedy
-
