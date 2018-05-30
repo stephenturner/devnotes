@@ -8,9 +8,16 @@ conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 
+# Update conda
+conda update -n base conda
+
 # Base environment
-conda install numpy scipy scikit-learn matplotlib pandas jupyter
+conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter pandoc
+
+# Enable bash kernel for jupyter notebook
+pip install bash_kernel
+python -m bash_kernel.install
 
 # Other environments
-conda create -y --name ngs    fastqc fastq-screen fastx_toolkit multiqc sratools picard bedtools htslib samtools bcftools vcftools bwa bowtie2 blast biopython mummer mash 
-conda create -y --name rnaseq fastqc fastq-screen fastx_toolkit multiqc sratools picard bedtools htslib samtools bcftools star salmon kallisto subread
+conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa bowtie2 blast biopython star salmon kallisto subread
+conda create -y --name mavium mashtree shovill snippy=3.2 fasttree bcftools bowtie2 picard varscan snp-pipeline
