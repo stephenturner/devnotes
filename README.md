@@ -1,1 +1,0 @@
-This directory contains random programming [notes](notes), orphan [scripts](scripts) that don't fit anywhere else, a few [makefiles](makefiles), and some placeholder [sbatch](sbatch) scripts for use on SLURM HPC systems.

@@ -5,25 +5,18 @@ sudo yum update
 sudo yum install -y epel-release
 
 # Essentials
-sudo yum install -y git tmux htop tree cmake parallel pcre environment-modules 
+sudo yum install -y gcc-c++ vim git tmux htop tree cmake parallel pcre curl environment-modules 
 
 # Some libraries you'll definitely need
-sudo yum -y install curl
-sudo yum -y install libcurl libcurl-devel
-sudo yum -y install libxml2 libxml2-devel
-sudo yum -y install libpng  libpng-devel
-sudo yum -y install openssl-devel
-sudo yum -y install mysql-devel
-
-# Needed for various R packages (minfi, mixOmics, rgl)
-sudo yum -y install mesa-libGL mesa-libGL-devel
-sudo yum -y install mesa-libGLU mesa-libGLU-devel
-sudo yum -y install libX11 libX11-devel
+sudo yum -y install libcurl libcurl-devel libxml2 libxml2-devel libpng libpng-devel openssl-devel mysql-devel hdf5-devel
 
 # Needed for samtools.
 sudo yum -y install bzip2-devel
 # If you get the libbz2.so.1.0 error, do this
 # sudo ln -s /usr/lib64/libbz.so /usr/lib64/libbz2.s.1.0
+
+# Needed for various R packages (minfi, mixOmics, rgl)
+sudo yum -y install mesa-libGL mesa-libGL-devel mesa-libGLU mesa-libGLU-devel libX11 libX11-devel
 
 
 # Java
