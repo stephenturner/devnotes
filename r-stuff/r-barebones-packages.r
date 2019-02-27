@@ -4,13 +4,12 @@
 # echo 'if (dir.exists("/Rtmp")) Sys.setenv(TMPDIR="/Rtmp")' >> .Rprofile
 
 install.packages("tidyverse")
-install.packages(("knitr", "rmarkdown"))
+install.packages("knitr")
+install.packages("rmarkdown")
 install.packages("devtools")
 
-source("https://bioconductor.org/biocLite.R")
-biocLite()
-biocLite("limma")
-biocLite("DESeq2")
+# install.packages("BiocManager")
+# BiocManager::install()
 
 # See also:
 # https://github.com/stephenturner/devnotes/blob/master/r-stuff/mypackages.r

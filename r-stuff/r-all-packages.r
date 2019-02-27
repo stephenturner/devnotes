@@ -3,9 +3,8 @@
 cran <- c(
   "addinslist",
   "assertr",
-  "base64enc",
   "beepr",
-  "bitops",
+  "caret",
   "caTools",
   "clipr",
   "datapasta",
@@ -17,42 +16,36 @@ cran <- c(
   "factoextra",
   "formatR",
   "ggrepel",
-  "gplots",
-  "heatmaply",
   "here",
   "Hmisc",
   "janitor",
-  "jsonlite",
+  "kableExtra",
   "knitr",
   "leaflet",
   "maps",
-  "markdown",
   "NMF",
-  "openxlsx",
   "pheatmap",
   "pkgdown",
   "ppclust",
   "printr",
   "proxy",
+  "remedy",
   "rmarkdown",
   "roxygen2",
   "shiny",
   "styler",
-  "Seurat",
   "tidyverse",
   "Tmisc",
   "VennDiagram",
   "viridis",
   "visNetwork",
-  "writexl",
-  "XML",
   "yaml"
 )
 
 
 # Workshop packages -------------------------------------------------------
 
-work <- c(
+workshop <- c(
   "mice",
   "caret",
   "randomForest",
@@ -70,11 +63,8 @@ work <- c(
 
 # Software packages
 bioc <- c(
-  # "affy",
   "annotate",
   "AnnotationDbi",
-  # "arrayQualityMetrics",
-  # "beadarray",
   "biomaRt",
   "clusterProfiler",
   "DESeq2",
@@ -87,8 +77,6 @@ bioc <- c(
   "GOstats",
   "limma",
   "minfi",
-  # "oligo",
-  # "oligoClasses",
   "pathview",
   "SPIA",
   "tximport"
@@ -127,28 +115,31 @@ anno <- c(
 # Install & test ----------------------------------------------------------
 
 # Do this once
-# install.packages("BiocManager")
+install.packages("BiocManager")
 
 # Set your CRAN mirror
 options("repos" = c(CRAN = "https://cloud.r-project.org/"))
 
-allpkgs <- c(cran, work, bioc, anno)
 
 # Install them all
 library(BiocManager)
-system.time(install(allpkgs))
+# allpkgs <- c(cran, workshop, bioc, anno)
+# system.time(install(allpkgs))
+system.time(install(cran))
+# system.time(install(workshop))
+# system.time(install(bioc))
+# system.time(install(anno))
 
 # Check that it worked
 for (p in cran) suppressPackageStartupMessages(library(p, character.only=TRUE))
-for (p in work) suppressPackageStartupMessages(library(p, character.only=TRUE))
-for (p in bioc) suppressPackageStartupMessages(library(p, character.only=TRUE))
-for (p in anno) suppressPackageStartupMessages(library(p, character.only=TRUE))
+# for (p in workshop) suppressPackageStartupMessages(library(p, character.only=TRUE))
+# for (p in bioc) suppressPackageStartupMessages(library(p, character.only=TRUE))
+# for (p in anno) suppressPackageStartupMessages(library(p, character.only=TRUE))
 
 
 # GitHub ------------------------------------------------------------------
 
 # devtools::install_github("stephenturner/Tmisc")
-devtools::install_github("stephenturner/annotables")
-devtools::install_github("stephenturner/hcop")
-devtools::install_github("hadley/emo")
-devtools::install_github("ThinkR-open/remedy") # https://github.com/ThinkR-open/remedy
+# devtools::install_github("stephenturner/annotables")
+# devtools::install_github("stephenturner/hcop")
+# devtools::install_github("hadley/emo")

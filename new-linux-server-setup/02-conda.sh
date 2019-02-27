@@ -5,19 +5,18 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 # Add bioconda channels. See docs at https://bioconda.github.io/
 conda config --add channels defaults
-conda config --add channels conda-forge
 conda config --add channels bioconda
+conda config --add channels conda-forge
 
 # Update conda
 conda update -n base conda
 
 # Base environment
-conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter pandoc
+conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter
 
 # Enable bash kernel for jupyter notebook
-pip install bash_kernel
-python -m bash_kernel.install
+# pip install bash_kernel
+# python -m bash_kernel.install
 
 # Other environments
-conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa bowtie2 blast biopython star salmon kallisto subread
-conda create -y --name mavium mashtree shovill snippy=3.2 fasttree bcftools bowtie2 picard varscan snp-pipeline
+conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow strelka snpeff qualimap diamond mash
