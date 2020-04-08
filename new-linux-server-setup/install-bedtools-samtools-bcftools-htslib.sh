@@ -1,8 +1,6 @@
 ## Install bedtools
-
-# become root
+# become root and navigate to the target directory
 sudo su
-# go to /usr/local/bin
 cd /usr/local/bin
 # get the statically linked binary
 wget https://github.com/arq5x/bedtools2/releases/download/v2.29.2/bedtools.static.binary
