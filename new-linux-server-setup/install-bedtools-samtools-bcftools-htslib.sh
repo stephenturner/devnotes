@@ -47,3 +47,9 @@ cd htslib-1.10.2
 ./configure --prefix=/usr/local
 make
 make install
+
+## Install vt (need libcurl-devel and openssl-devel)
+git clone https://github.com/atks/vt.git
+cd vt
+make
+sudo cp vt /usr/local/bin/
