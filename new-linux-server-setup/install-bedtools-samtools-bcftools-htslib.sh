@@ -40,10 +40,10 @@ make install
 sudo su
 cd /root
 # Get and unpack the source
-  wget https://github.com/samtools/htslib/releases/download/1.10.2/htslib-1.10.2.tar.bz2
-  tar xjf htslib-1.10.2.tar.bz2
-  cd htslib-1.10.2
+wget https://github.com/samtools/htslib/releases/download/1.10.2/htslib-1.10.2.tar.bz2
+tar xjf htslib-1.10.2.tar.bz2
+cd htslib-1.10.2
 # configure and install
-  ./configure --prefix=/usr/local
-  make
-  make install
+./configure --prefix=/usr/local
+make
+make install
