@@ -19,4 +19,5 @@ conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter
 # python -m bash_kernel.install
 
 # Other environments
-conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow snpeff mash diamond strelka qualimap
+# conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow snpeff mash diamond strelka qualimap
+conda create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa blast snpeff mash diamond
