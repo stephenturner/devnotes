@@ -12,7 +12,8 @@ conda config --add channels conda-forge
 conda update -n base conda
 
 # Base environment
-conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter
+conda install mamba
+# conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter
 
 # Enable bash kernel for jupyter notebook
 # pip install bash_kernel
@@ -20,4 +21,4 @@ conda install -y numpy scipy scikit-learn matplotlib pandas ipython jupyter
 
 # Other environments
 # conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow snpeff mash diamond strelka qualimap vt
-conda create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa blast snpeff mash diamond vt
+mamba create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa blast snpeff vt varscan lofreq plink
