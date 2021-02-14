@@ -1,2 +1,10 @@
-.Rapp.history
+.DS_Store*
+._*
+.Trashes
+.private/
+.*.local
 .Rhistory
+.Rapp.history
+.Rproj.user
+.RData
+.Ruserdata
