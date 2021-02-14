@@ -21,4 +21,4 @@ conda install mamba
 
 # Other environments
 # conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow snpeff mash diamond strelka qualimap vt
-mamba create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa blast snpeff vt varscan lofreq plink
+mamba create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa blast snpeff vt varscan plink akt
