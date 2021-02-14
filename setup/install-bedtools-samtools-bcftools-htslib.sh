@@ -49,6 +49,8 @@ make
 make install
 
 ## Install vt (need libcurl-devel and openssl-devel)
+sudo su
+# yum install -y libcurl-devel openssl-devel
 git clone https://github.com/atks/vt.git
 cd vt
 make
