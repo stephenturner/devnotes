@@ -1,7 +1,6 @@
 # CRAN packages -----------------------------------------------------------
 
 cran <- c(
-  "addinslist",
   "assertr",
   "beepr",
   "clipr",
@@ -18,10 +17,11 @@ cran <- c(
   "leaflet",
   "maps",
   "pkgdown",
+  "remedy",
   "rmarkdown",
   "roxygen2",
   "shiny",
-  "tidymodels",
+  # "tidymodels",
   "tidyverse",
   "Tmisc",
   "VennDiagram",
@@ -130,6 +130,6 @@ for (p in cran) suppressPackageStartupMessages(library(p, character.only=TRUE))
 # devtools::install_github("stephenturner/annotables")
 # devtools::install_github("stephenturner/hcop")
 # devtools::install_github("hadley/emo")
-devtools::install_github('Timag/imageclipr')
+remotes::install_github('Timag/imageclipr')
 remotes::install_github("MilesMcBain/breakerofchains")
 
