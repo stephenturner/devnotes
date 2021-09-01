@@ -3,6 +3,7 @@
 cran <- c(
   "assertr",
   "beepr",
+  "BiocManager",
   "clipr",
   "datapasta",
   "data.table",
@@ -100,9 +101,6 @@ anno <- c(
 
 
 # Install & test ----------------------------------------------------------
-
-# Do this once
-install.packages("BiocManager")
 
 # Set your CRAN mirror
 options("repos" = c(CRAN = "https://cloud.r-project.org/"))
