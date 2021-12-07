@@ -1,6 +1,6 @@
 # barebones
 yum update
-yum install -y vim git yum-utils
+yum install -y vim git yum-utils tmux
 
 # docker
 yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
