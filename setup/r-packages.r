@@ -35,6 +35,7 @@ for (p in cran) suppressPackageStartupMessages(library(p, character.only=TRUE))
 
 # GitHub ------------------------------------------------------------------
 
+# Requires GITHUB_PAT set in ~/.Renviron
 gh <- c(
   "MilesMcBain/breakerofchains",
   "signaturescience/fiphde"
