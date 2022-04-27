@@ -18,6 +18,9 @@ conda activate base
 conda install mamba
 conda deactivate
 
+# snakemake (helpful to have pyprojroot)
+mamba create -y --name snakemake snakemake pyprojroot
+
 # standard ngs toolkit
 # conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow snpeff mash diamond strelka qualimap vt
 mamba create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib=1.9 samtools=1.9 bcftools=1.9 bwa blast snpeff vt varscan plink2 akt minimap2
