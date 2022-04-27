@@ -20,3 +20,11 @@ echo 'export PS1="\[\e[00;37m\]\u@\[\e[0m\]\[\e[00;36m\]\h\[\e[0m\]\[\e[00;37m\]
 yum install -y dnf dnf-plugins-core
 dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 gh auth login
+
+# Security
+sed -i 's/^PasswordAuthentication yes/PasswordAuthentication no/g'
+systemctl restart sshd
+yum install epel-release
+yum install fail2ban
+systemctl start fail2ban
+systemctl enable fail2ban

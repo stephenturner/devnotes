@@ -20,8 +20,8 @@ conda deactivate
 
 # standard ngs toolkit
 # conda create -y --name ngs fastqc fastq-screen fastx_toolkit multiqc sra-tools entrez-direct picard bedtools htslib samtools bcftools vcftools bwa minimap2 bowtie2 blast biopython nextflow snpeff mash diamond strelka qualimap vt
-mamba create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib=1.13 samtools=1.13 bcftools=1.13 tabix vcftools bwa blast snpeff vt varscan plink2 akt minimap2
+mamba create -y --name ngs fastx_toolkit sra-tools entrez-direct picard bedtools htslib=1.9 samtools=1.9 bcftools=1.9 bwa blast snpeff vt varscan plink2 akt minimap2
 
 # https://github.com/Illumina/GTCtoVCF#requirements
-mamba create --name gtc2vcf numpy=1.11.2 bcftools=1.13 pysam=0.9.0 pyvcf=0.6.8
+# mamba create --name gtc2vcf numpy=1.11.2 bcftools=1.13 pysam=0.9.0 pyvcf=0.6.8
 # mamba update --all
