@@ -40,7 +40,7 @@ gh <- c(
   "MilesMcBain/breakerofchains",
   "signaturescience/fiphde"
 )
-remotes::install_github(gh)
+remotes::install_github(gh, upgrade=FALSE)
 
 
 # Bioconductor ------------------------------------------------------------
@@ -48,7 +48,7 @@ remotes::install_github(gh)
 # Minimal
 if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")
 BiocManager::install()
-BiocManager::install("Biostrings")
+BiocManager::install("Biostrings", ask=FALSE, update=FALSE)
 
 # bioc_all <- c(
 #   "annotate",
