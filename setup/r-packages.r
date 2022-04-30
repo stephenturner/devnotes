@@ -19,6 +19,7 @@ cran <- c(
   "leaflet",
   "maps",
   "pkgdown",
+  "quarto",
   "remedy",
   "rmarkdown",
   "roxygen2",
