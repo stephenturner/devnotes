@@ -22,6 +22,7 @@ cran <- c(
   "remedy",
   "rmarkdown",
   "roxygen2",
+  "rticles",
   "shiny",
   "skater",
   "tidymodels",
