@@ -29,6 +29,7 @@ cran <- c(
   "tidymodels",
   "tidyverse",
   "Tmisc",
+  "usethis",
   "yaml"
 )
 install.packages(cran)
