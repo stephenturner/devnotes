@@ -1,0 +1,44 @@
+#!/bin/bash
+
+if [ ! $# -eq 0 ]; then echo "Writes boilerplate Makefile. Usage: makemake"; exit 1; fi
+if [ -f "Makefile" ]; then echo "Makefile exists; exiting."; exit 1; fi
+
+cat > Makefile <<'EOF'
+INPUTS=$(wildcard data/*.txt)
+OUTPUTS=$(patsubst data/%.txt, res/%.csv, $(INPUTS))
+
+## Automatic Variables
+## $@         : target of the current rule
+## $^         : all the dependencies in the current rule
+## $<         : the first dependency in the current rule
+## %.pat      : wildcard; matches {something}.pat
+## $*         : stem of the wildcard match; contains {something}
+## $(@D)      : directory the current target resides in
+## 
+.PHONY: all clean help
+
+## all        : runs all rules
+all: target.txt
+
+target.txt: $(OUTPUTS)
+	cat $< > $@
+
+res/%.csv: data/%.txt
+	@mkdir -p $(@D)
+	cp $< $@
+
+## clean      : removes all files
+clean:
+	rm -f target.txt 
+	rm -f $(OUTPUTS)
+
+## variables  : print variables
+variables:
+	@echo INPUTS: $(INPUTS)
+	@echo OUTPUTS: $(OUTPUTS)
+
+
+## help       : prints this help
+help: Makefile
+	@sed -n 's/^##//p' $<
+EOF
