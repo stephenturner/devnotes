@@ -1,5 +1,5 @@
 # Compile and install htslib, bcftools, samtools to home directory
-VERSION_SAMTOOLS="1.18"
+VERSION_SAMTOOLS="1.17"
 
 # Set up dirs where stuff will be installed
 mkdir -p ${HOME}/bin/htslib
@@ -65,10 +65,10 @@ make arm_neon=1 aarch64=1
 mv minimap2 minimap2.1 ${HOME}/bin
 # man ~/bin/minimap2.1
 
+
 ### BEDTOOLS
-cd ${HOME}/tmp
-VERSION_BEDTOOLS="2.31.0"
-wget https://github.com/arq5x/bedtools2/releases/download/v${VERSION_BEDTOOLS}/bedtools-${VERSION_BEDTOOLS}.tar.gz
-tar xzf bedtools-${VERSION_BEDTOOLS}.tar.gz
-cd bedtools2
-make
+cd ${HOME}/bin
+VERSION_BEDTOOLS="2.30.0"
+wget https://github.com/arq5x/bedtools2/releases/download/v${VERSION_BEDTOOLS}/bedtools.static.binary
+mv bedtools.static.binary bedtools
+
