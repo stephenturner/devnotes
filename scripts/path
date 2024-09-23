@@ -3,7 +3,7 @@
 # Print help if no arguments
 help="Prints full path of supplied arguments"
 usage="Usage: $0 <files>"
-if [[ $# -eq 0 ]] ; then
+if [ $# -eq 0 ] ; then
     echo -e "\n$help\n$usage\n" 
     exit 0
 fi
